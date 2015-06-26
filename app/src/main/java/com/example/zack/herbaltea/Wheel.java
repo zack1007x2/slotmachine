@@ -52,7 +52,7 @@ public class Wheel extends ViewFlipper {
         mCount--;
         mSpeed += mFactor;
 
-
+        //啟動
         if (first) {
             Animation outToBottom = new TranslateAnimation(
                     Animation.RELATIVE_TO_PARENT, 0.0f,
@@ -75,6 +75,7 @@ public class Wheel extends ViewFlipper {
 
             first = false;
         }else if(mCount == 0){
+            //結束前
             Animation outToBottom = new TranslateAnimation(
                     Animation.RELATIVE_TO_PARENT, 0.0f,
                     Animation.RELATIVE_TO_PARENT, 0.0f,
@@ -109,6 +110,7 @@ public class Wheel extends ViewFlipper {
             this.setInAnimation(Set);
             this.setOutAnimation(outToBottom);
         } else {
+            //轉動時
             Animation outToBottom = new TranslateAnimation(
                     Animation.RELATIVE_TO_PARENT, 0.0f,
                     Animation.RELATIVE_TO_PARENT, 0.0f,
